@@ -2,8 +2,14 @@ describe ('Airport',function(){
   
   it ('has no planes when created', function(){
     var airport = new Airport();
-    console.log(airport)
     expect(airport.allPlanes()).toEqual([]);
+  });
+  
+  it('can recieve a plane that lands', function(){
+    var plane = 'plane';
+    var airport = new Airport();
+    airport.land(plane);
+    expect(airport.allPlanes()).toEqual([plane]);
   });
 });
   
