@@ -9,3 +9,8 @@ Airport.prototype.allPlanes = function() {
 Airport.prototype.land = function(plane){
   this._allPlanes.push(plane);
 };
+
+Airport.prototype.takeOff = function(plane) {
+  var index = this._allPlanes.indexOf(plane);
+  delete this._allPlanes[index]
+};
