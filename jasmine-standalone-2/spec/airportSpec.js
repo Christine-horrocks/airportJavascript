@@ -27,6 +27,7 @@ describe ('Airport',function(){
       var plane = 'plane';
       airport.land(plane);
     };
+
     var plane = 'plane';
     expect(function() { airport.land(plane); } ).toThrow(new Error("NOOO!"));
   });
