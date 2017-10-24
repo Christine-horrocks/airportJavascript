@@ -19,4 +19,15 @@ describe ('Airport',function(){
     airport.takeOff(plane);
     expect(airport.allPlanes()).not.toContain(plane);
   });
+
+  it ('has a defined maximum capacity', function(){
+    var airport = new Airport();
+    var times = 10;
+    for(var i = 0; i < times; i++){
+      var plane = 'plane';
+      airport.land(plane);
+    };
+    var plane = 'plane';
+    expect(function() { airport.land(plane); } ).toThrow(new Error("NOOO!"));
+  });
 });
